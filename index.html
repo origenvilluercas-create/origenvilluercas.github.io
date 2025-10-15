@@ -144,7 +144,7 @@
                          <p class="text-sm font-medium text-slate-300">¿Tienes un destino decidido o buscas una experiencia diferente?</p>
                          <div class="flex flex-col sm:flex-row gap-4">
                             <label class="relative flex-1 cursor-pointer bg-white/10 border border-white/20 p-4 rounded-lg flex items-center justify-center gap-4 transition-all duration-300 hover:bg-white/20">
-                                <input type="radio" name="Tipo de Viaje" value="Destino Decidido" class="hidden">
+                                <input type="radio" name="Tipo de Viaje" value="Destino Decidido" class="hidden" required>
                                 <span>Sí, tengo un destino claro.</span>
                             </label>
                              <label class="relative flex-1 cursor-pointer bg-white/10 border border-white/20 p-4 rounded-lg flex items-center justify-center gap-4 transition-all duration-300 hover:bg-white/20">
@@ -161,12 +161,8 @@
                                         <option class="bg-slate-800" value="La Vera">La Vera</option>
                                         <option class="bg-slate-800" value="Las Hurdes">Las Hurdes</option>
                                     </optgroup>
-                                    <optgroup label="Andalucía" class="bg-slate-700 text-white font-bold">
-                                        <option class="bg-slate-800" value="Almería">Almería</option><option class="bg-slate-800" value="Cádiz">Cádiz</option><option class="bg-slate-800" value="Córdoba">Córdoba</option><option class="bg-slate-800" value="Granada">Granada</option><option class="bg-slate-800" value="Huelva">Huelva</option><option class="bg-slate-800" value="Jaén">Jaén</option><option class="bg-slate-800" value="Málaga">Málaga</option><option class="bg-slate-800" value="Sevilla">Sevilla</option>
-                                    </optgroup>
-                                    <optgroup label="Aragón" class="bg-slate-700 text-white font-bold">
-                                        <option class="bg-slate-800" value="Huesca">Huesca</option><option class="bg-slate-800" value="Teruel">Teruel</option><option class="bg-slate-800" value="Zaragoza">Zaragoza</option>
-                                    </optgroup>
+                                    <optgroup label="Andalucía" class="bg-slate-700 text-white font-bold"><option class="bg-slate-800" value="Almería">Almería</option><option class="bg-slate-800" value="Cádiz">Cádiz</option><option class="bg-slate-800" value="Córdoba">Córdoba</option><option class="bg-slate-800" value="Granada">Granada</option><option class="bg-slate-800" value="Huelva">Huelva</option><option class="bg-slate-800" value="Jaén">Jaén</option><option class="bg-slate-800" value="Málaga">Málaga</option><option class="bg-slate-800" value="Sevilla">Sevilla</option></optgroup>
+                                    <optgroup label="Aragón" class="bg-slate-700 text-white font-bold"><option class="bg-slate-800" value="Huesca">Huesca</option><option class="bg-slate-800" value="Teruel">Teruel</option><option class="bg-slate-800" value="Zaragoza">Zaragoza</option></optgroup>
                                     <optgroup label="Asturias" class="bg-slate-700 text-white font-bold"><option class="bg-slate-800" value="Asturias">Asturias</option></optgroup>
                                     <optgroup label="Canarias" class="bg-slate-700 text-white font-bold"><option class="bg-slate-800" value="Las Palmas">Las Palmas</option><option class="bg-slate-800" value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option></optgroup>
                                     <optgroup label="Cantabria" class="bg-slate-700 text-white font-bold"><option class="bg-slate-800" value="Cantabria">Cantabria</option></optgroup>
@@ -197,13 +193,44 @@
                     </div>
                 </fieldset>
 
-                <!-- Sección 3: Viajeros y Fechas -->
+                <!-- Sección 3: Transporte -->
                 <fieldset class="border-t border-white/20 pt-6 scroll-animate">
-                    <legend class="text-xl font-semibold text-white px-2">3. Viajeros y Fechas</legend>
+                    <legend class="text-xl font-semibold text-white px-2">3. Transporte</legend>
+                    <div class="mt-4 space-y-4">
+                        <p class="text-sm font-medium text-slate-300">¿Cómo prefieres desplazarte?</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <label class="relative flex-1 cursor-pointer bg-white/10 border border-white/20 p-4 rounded-lg flex items-center justify-center gap-4 transition-all duration-300 hover:bg-white/20">
+                                <input type="radio" name="Transporte Principal" value="Vehículo Propio" class="hidden transport-main-choice" required>
+                                <span>Vehículo Propio</span>
+                            </label>
+                            <label class="relative flex-1 cursor-pointer bg-white/10 border border-white/20 p-4 rounded-lg flex items-center justify-center gap-4 transition-all duration-300 hover:bg-white/20">
+                                <input type="radio" name="Transporte Principal" value="Necesito Transporte" class="hidden transport-main-choice">
+                                <span>Necesito Transporte</span>
+                            </label>
+                        </div>
+                        <div id="public-transport-options" class="hidden mt-4 space-y-2 pl-4 border-l-2 border-blue-500">
+                            <p class="text-sm font-medium text-slate-300">Preferencia:</p>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="Tipo de Transporte Público" value="Tren" class="text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-600">
+                                    <span>Tren</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="Tipo de Transporte Público" value="Autobús" class="text-blue-600 bg-gray-700 border-gray-600 focus:ring-blue-600">
+                                    <span>Autobús</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!-- Sección 4: Viajeros y Fechas -->
+                <fieldset class="border-t border-white/20 pt-6 scroll-animate">
+                    <legend class="text-xl font-semibold text-white px-2">4. Viajeros y Fechas</legend>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                         <div>
                             <label for="adults" class="block text-sm font-medium text-slate-300">Nº de adultos</label>
-                            <input type="number" id="adults" name="Adultos" min="1" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" placeholder="2">
+                            <input type="number" id="adults" name="Adultos" min="1" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" placeholder="2" required>
                         </div>
                         <div>
                             <label for="children" class="block text-sm font-medium text-slate-300">Nº de niños (2-17 años)</label>
@@ -211,24 +238,24 @@
                         </div>
                         <div>
                             <label for="startDate" class="block text-sm font-medium text-slate-300">Desde</label>
-                            <input type="date" id="startDate" name="Fecha de Inicio" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                            <input type="date" id="startDate" name="Fecha de Inicio" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                         </div>
                         <div>
                             <label for="endDate" class="block text-sm font-medium text-slate-300">Hasta</label>
-                            <input type="date" id="endDate" name="Fecha de Fin" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                            <input type="date" id="endDate" name="Fecha de Fin" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                         </div>
                     </div>
                 </fieldset>
 
-                <!-- Sección 4: Alojamiento y Preferencias -->
+                <!-- Sección 5: Alojamiento y Preferencias -->
                 <fieldset class="border-t border-white/20 pt-6 scroll-animate">
-                    <legend class="text-xl font-semibold text-white px-2">4. Alojamiento y Preferencias</legend>
+                    <legend class="text-xl font-semibold text-white px-2">5. Alojamiento y Preferencias</legend>
                      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                         <div class="md:col-span-2">
                              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
                                      <label class="block text-sm font-medium text-slate-300 mb-2">Tipo de alojamiento</label>
-                                     <select id="accommodationType" name="Alojamiento" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                                     <select id="accommodationType" name="Alojamiento" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                          <option class="bg-slate-800" value="Hotel">Hotel</option>
                                          <option class="bg-slate-800" value="Apartamento">Apartamento</option>
                                          <option class="bg-slate-800" value="Casa Rural">Casa Rural</option>
@@ -247,7 +274,7 @@
                         </div>
                          <div>
                              <label class="block text-sm font-medium text-slate-300 mb-2">Régimen de comidas</label>
-                             <select name="Régimen" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                             <select name="Régimen" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                  <option class="bg-slate-800">Solo Alojamiento</option>
                                  <option class="bg-slate-800">Alojamiento y Desayuno</option>
                                  <option class="bg-slate-800">Media Pensión</option>
@@ -257,7 +284,7 @@
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-300 mb-2">Tipo de entorno</label>
-                            <select name="Entorno" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                            <select name="Entorno" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                 <option class="bg-slate-800">Playa</option>
                                 <option class="bg-slate-800">Montaña</option>
                                 <option class="bg-slate-800">Ciudad</option>
@@ -266,7 +293,7 @@
                        </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-300 mb-2">Ritmo de viaje</label>
-                            <select name="Ritmo" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                            <select name="Ritmo" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                 <option class="bg-slate-800">Relajado</option>
                                 <option class="bg-slate-800">Activo</option>
                                 <option class="bg-slate-800">Equilibrado</option>
@@ -274,7 +301,7 @@
                        </div>
                          <div>
                              <label class="block text-sm font-medium text-slate-300 mb-2">Presupuesto aproximado (€)</label>
-                             <select name="Presupuesto" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                             <select name="Presupuesto" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                 <option class="bg-slate-800" value="" disabled selected>Selecciona un rango de precios</option>
                                 <option class="bg-slate-800" value="<300">Menos de 300 €</option>
                                 <option class="bg-slate-800" value="300-500">300 € - 500 €</option>
@@ -290,7 +317,7 @@
                          <div class="md:col-span-2 flex justify-center">
                             <div class="w-full md:w-1/2">
                                  <label class="block text-sm font-medium text-slate-300 mb-2">Documentación del viaje</label>
-                                 <select name="Documentación" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition">
+                                 <select name="Documentación" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition" required>
                                      <option class="bg-slate-800">Digital (PDF)</option>
                                      <option class="bg-slate-800">Físico</option>
                                  </select>
@@ -299,9 +326,9 @@
                      </div>
                 </fieldset>
 
-                <!-- Sección 5: ¡Cuéntanos más! -->
+                <!-- Sección 6: ¡Cuéntanos más! -->
                 <fieldset class="border-t border-white/20 pt-6 scroll-animate">
-                    <legend class="text-xl font-semibold text-white px-2">5. ¡Cuéntanos más!</legend>
+                    <legend class="text-xl font-semibold text-white px-2">6. ¡Cuéntanos más!</legend>
                     <div class="mt-4">
                         <label for="comments" class="block text-sm font-medium text-slate-300">¿Hay algo más que debamos saber?</label>
                         <textarea id="comments" name="Comentarios Adicionales" rows="4" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" placeholder="Alergias, intereses especiales, celebraciones, etc."></textarea>
@@ -343,6 +370,8 @@
             const accommodationTypeSelect = document.getElementById('accommodationType');
             const hotelStarsContainer = document.getElementById('hotel-stars-container');
             const scrollingHeader = document.getElementById('scrolling-header');
+            const transportMainChoices = document.querySelectorAll('.transport-main-choice');
+            const publicTransportOptions = document.getElementById('public-transport-options');
 
             // --- Scrolling Header Logic ---
             window.addEventListener('scroll', () => {
@@ -391,6 +420,21 @@
                 }
             });
             
+            // --- Transport Logic ---
+            transportMainChoices.forEach(radio => {
+                radio.addEventListener('change', (event) => {
+                    // Visual feedback for selection
+                    transportMainChoices.forEach(r => r.parentElement.classList.remove('destination-label-selected'));
+                    event.target.parentElement.classList.add('destination-label-selected');
+
+                    if (event.target.value === 'Necesito Transporte') {
+                        publicTransportOptions.classList.remove('hidden');
+                    } else {
+                        publicTransportOptions.classList.add('hidden');
+                    }
+                });
+            });
+
             // --- Form Submission Logic ---
             const form = document.getElementById('travel-form');
             const confirmationMessage = document.getElementById('confirmation-message');
@@ -413,11 +457,13 @@
                         confirmationMessage.classList.remove('hidden');
                         form.reset();
                         // Reset visual styles after submission
-                        document.querySelectorAll('input[name="Tipo de Viaje"]').forEach(r => {
-                           r.parentElement.classList.remove('destination-label-selected');
+                        document.querySelectorAll('.destination-label-selected').forEach(label => {
+                           label.classList.remove('destination-label-selected');
                         });
                         destinationDetails.classList.add('hidden');
                         hotelStarsContainer.classList.remove('hidden');
+                        publicTransportOptions.classList.add('hidden');
+
                     } else {
                         response.json().then(data => {
                             if (Object.hasOwn(data, 'errors')) {
@@ -456,9 +502,6 @@
     </script>
 </body>
 </html>
-
-
-
 
 
 
