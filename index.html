@@ -193,7 +193,7 @@
                     </div>
                 </fieldset>
 
-                <!-- Sección 3: Transporte -->
+                <!-- NEW Sección 3: Transporte -->
                 <fieldset class="border-t border-white/20 pt-6 scroll-animate">
                     <legend class="text-xl font-semibold text-white px-2">3. Transporte</legend>
                     <div class="mt-4 space-y-4">
@@ -326,12 +326,46 @@
                      </div>
                 </fieldset>
 
-                <!-- Sección 6: ¡Cuéntanos más! -->
+                <!-- Sección 6: Intereses -->
                 <fieldset class="border-t border-white/20 pt-6 scroll-animate">
-                    <legend class="text-xl font-semibold text-white px-2">6. ¡Cuéntanos más!</legend>
+                    <legend class="text-xl font-semibold text-white px-2">6. Intereses</legend>
+                    <div class="mt-4 space-y-4">
+                        <p class="text-sm font-medium text-slate-300">¿Qué tipo de actividades te gustaría incluir?</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Gastronomía" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Gastronomía</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Cultura e Historia" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Cultura e Historia</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Aventura y Deporte" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Aventura y Deporte</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Naturaleza" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Naturaleza</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Relax y Bienestar" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Relax y Bienestar</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer bg-white/5 p-3 rounded-lg transition hover:bg-white/10">
+                                <input type="checkbox" name="Intereses[]" value="Compras" class="h-4 w-4 rounded bg-gray-700 border-gray-600 text-blue-600 focus:ring-blue-600">
+                                <span>Compras</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 7: ¡Cuéntanos más! -->
+                <fieldset class="border-t border-white/20 pt-6 scroll-animate">
+                    <legend class="text-xl font-semibold text-white px-2">7. ¡Cuéntanos más!</legend>
                     <div class="mt-4">
                         <label for="comments" class="block text-sm font-medium text-slate-300">¿Hay algo más que debamos saber?</label>
-                        <textarea id="comments" name="Comentarios Adicionales" rows="4" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" placeholder="Alergias, intereses especiales, celebraciones, etc."></textarea>
+                        <textarea id="comments" name="Comentarios Adicionales" rows="4" class="mt-1 w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:ring-2 focus:ring-blue-400 focus:outline-none transition" placeholder="Ubicación del hotel, intereses especiales, etc."></textarea>
                     </div>
                 </fieldset>
 
@@ -502,6 +536,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
